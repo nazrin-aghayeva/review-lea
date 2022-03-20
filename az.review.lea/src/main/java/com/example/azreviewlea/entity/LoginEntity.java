@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "authentication_info")
+@Table(name = "authentication_info", schema = "review_lea")
 public class LoginEntity {
     @Id
     private String id;
