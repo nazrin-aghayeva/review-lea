@@ -56,16 +56,21 @@
     <div class="login-section-container">
         <h1 class="login-section-container-title">Welcome Back!</h1>
         <p class="login-section-container-description" th:utext="${confirmMessage}"> </p>
-        <form th:action="@{/authentication}" method="GET" class="login-section-container-form">
+        <form
+                th:action="@{/authentication/(email=${email})}"
+        method="GET" class="login-section-container-form">
             <div class="login-section-container-form-input-wrapper">
                 <img class="input-icons" src="/img/img.png" alt="User Icon">
                 <label for="email"></label>
-                <input name="email" th:placeholder="Email" class="login-section-container-form-input" id="email" placeholder="Email address" type="email">
+                <input name="email"  th:placeholder="Email" class="login-section-container-form-input" id="email"
+                       placeholder="Email address" type="email">
             </div>
             <div class="login-section-container-form-input-wrapper">
                 <img class="input-icons" src="/img/img_2.png" alt="User Icon">
                 <label for="password"></label>
-                <input name="password"  th:placeholder="Password" class="login-section-container-form-input" id="password" placeholder="Password" type="password">
+                <input name="password"  th:placeholder="Password"
+                       class="login-section-container-form-input"
+                       id="password" placeholder="Password" type="password">
             </div>
             <div class="login-section-container-options">
                 <div class="login-section-container-options-wrapper">
