@@ -1,8 +1,6 @@
 package com.example.azreviewlea.controller;
 
-import com.example.azreviewlea.dto.Hotel;
 import com.example.azreviewlea.service.MainService;
-import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,15 +25,11 @@ public class MainPageController {
     @GetMapping("/like")
     public ModelAndView addLike(Model model, @RequestParam("hotel") Integer id){
         model.addAttribute("hotel", id);
-//        mainService.addLike(id);
+        mainService.addLike(id);
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("performance");
         return modelAndView;
     }
 
-    @GetMapping("/data")
-    public List<Hotel> getHotels(){
-          return mainService.rank();
-    }
 
 }
