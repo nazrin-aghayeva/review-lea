@@ -18,14 +18,14 @@ public class LoginController {
 
     private final LoginService loginService;
 
-    @GetMapping("/authentication")
-    public ModelAndView signUp(Model model, @RequestParam(required = false) String email) {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("login");
-        model.addAttribute(email);
-        loginService.updateAuthInformation(email);
-        return modelAndView;
-    }
+//    @GetMapping("/authentication")
+//    public ModelAndView signUp(Model model, @RequestParam(required = false) String email) {
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.setViewName("login");
+//        model.addAttribute(email);
+//        loginService.updateAuthInformation(email);
+//        return modelAndView;
+//    }
 
     @GetMapping("/test")
     public ModelAndView test() {
