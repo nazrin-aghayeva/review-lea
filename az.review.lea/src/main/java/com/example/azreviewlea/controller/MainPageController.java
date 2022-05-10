@@ -27,7 +27,7 @@ public class MainPageController {
     @GetMapping("/like")
     public ModelAndView addLike(Model model, @RequestParam("hotel") Integer id){
         model.addAttribute("hotel", id);
-        mainService.addLike(id);
+//        mainService.addLike(id);
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("performance");
         return modelAndView;
